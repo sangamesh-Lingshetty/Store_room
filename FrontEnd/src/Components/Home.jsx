@@ -137,7 +137,6 @@ export default function Home() {
     } else {
       alert("Please enter a reminder time.");
     }
-   
   };
 
   const showNotification = (message) => {
