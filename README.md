@@ -116,8 +116,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 - **Sangamesh** - Full Stack Developer
-- GitHub: [@sangamesh123](https://github.com/sangamesh123)
-- Email: [your-email@example.com](mailto:your-email@example.com)
+- GitHub: [@sangamesh123](https://github.com/sangamesh-Lingshetty)
+- Email: [your-email@example.com](sangameshlingshetty@gmail.com)
 
 ---
 
