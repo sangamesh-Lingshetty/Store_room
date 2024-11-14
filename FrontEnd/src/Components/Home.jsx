@@ -26,8 +26,8 @@ export default function Home() {
     if (item.title) {
       try {
         const url = isEdit
-          ? `http://localhost:5000/todo/${isEdit}`
-          : `http://localhost:5000/todo`;
+          ? `https://store-room-api.vercel.app/todo/${isEdit}`
+          : `https://store-room-api.vercel.app/todo`;
         const response = await fetch(url, {
           method: isEdit ? "PUT" : "POST",
           headers: {
@@ -61,7 +61,7 @@ export default function Home() {
 
   const fetchTodo = async () => {
     try {
-      const response = await fetch("http://localhost:5000/todo");
+      const response = await fetch("https://store-room-api.vercel.app/todo");
       const data = await response.json();
       setAllData(data.todos.reverse());
     } catch (error) {
@@ -80,7 +80,7 @@ export default function Home() {
 
   const handleDelete = async (todoId) => {
     try {
-      const url = `http://localhost:5000/todo/${todoId}`;
+      const url = `https://store-room-api.vercel.app/todo/${todoId}`;
       const response = await fetch(url, {
         method: "DELETE",
         headers: {
