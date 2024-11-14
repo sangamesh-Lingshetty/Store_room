@@ -23,14 +23,6 @@ You can try the live version of the app here:
 - **Edit Tasks**: Update existing tasks.
 - **Delete Tasks**: Remove tasks you no longer need.
 - **Responsive Design**: The app is fully responsive and works well on both desktop and mobile devices.
-  
-## 🖼️ Screenshots
-
-![Home Page](https://via.placeholder.com/800x400?text=Home+Page+Image)
-*Home Page of the Store Room To-Do List App*
-
-![Task Reminder](https://via.placeholder.com/800x400?text=Task+Reminder+Image)
-*Set reminders for your tasks and get notified!*
 
 ## 🛠️ How to Run the Project Locally
 
