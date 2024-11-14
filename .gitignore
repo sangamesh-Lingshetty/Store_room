@@ -1,0 +1,11 @@
+/BackEnd/node_modules
+/FrontEnd/node_modules
+
+
+
+# testing
+/coverage
+
+
+# production
+/build
