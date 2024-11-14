@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import {
   Bell,
   Calendar,
@@ -8,6 +9,7 @@ import {
   Edit,
   PlusCircle,
 } from "lucide-react";
+import { handlesuccess ,handleerror} from "../util";
 
 export default function Home() {
   const [item, setItem] = useState({ title: "", remainder: "" });
@@ -40,6 +42,7 @@ export default function Home() {
         if (response.ok) {
           if (isEdit) {
             const updatedTodo = data.todo || data;
+            handlesuccess("Update Successfully")
             setAllData((prevData) =>
               prevData.map((todo) => (todo._id === isEdit ? updatedTodo : todo))
             );
@@ -47,10 +50,12 @@ export default function Home() {
           } else {
             setAllData([data, ...allData]);
           }
+          handlesuccess("Addedd Successfully");
           setItem({ title: "", remainder: "" });
           setAlarm({});
           
         } else {
+          handleerror("Failed to add item");
           console.log("Failed to add item", data.error);
         }
       } catch (error) {
@@ -65,6 +70,7 @@ export default function Home() {
       const data = await response.json();
       setAllData(data.todos.reverse());
     } catch (error) {
+      handleerror("Failed to fetch item");
       console.log("Error fetching data", error);
     }
   };
@@ -89,9 +95,11 @@ export default function Home() {
       });
 
       if (response.ok) {
+        handlesuccess("delete Successfully")
         setAllData((prevdata) => prevdata.filter((item) => item._id !== todoId));
       }
     } catch (error) {
+      handleerror("Failed to delete item");
       console.log("error from delete op", error);
     }
   };
@@ -105,6 +113,7 @@ export default function Home() {
     e.preventDefault();
 
     if (item.remainder) {
+      
       setAlarm((prev) => ({
         ...prev,
         [todoId]: {
